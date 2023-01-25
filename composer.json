@@ -1,0 +1,18 @@
+{
+    "name": "anildo/magazinevoce-php",
+    "description": "Implementa interações com o magazinevoce da Magazine Luiza em PHP",
+    "type": "library",
+    "license": "MIT License",
+    "autoload": {
+        "psr-4": {
+            "Anildo\\MagazinevocePhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anildo Junior Carneiro",
+            "email": "anildo.10@hotmail.com"
+        }
+    ],
+    "require": {}
+}
