@@ -2,7 +2,7 @@
     "name": "anildo/magazinevoce-php",
     "description": "Implementa interações com o magazinevoce da Magazine Luiza em PHP",
     "type": "library",
-    "license": "MIT License",
+    "license": "",
     "autoload": {
         "psr-4": {
             "Anildo\\MagazinevocePhp\\": "src/"
