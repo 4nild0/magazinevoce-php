@@ -1,5 +1,8 @@
 {
     "name": "anildo/magazinevoce-php",
+    "description": "Implementa busca nos sites magazinevoce da Magazine Luiza usando php",
+    "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Anildo\\MagazinevocePhp\\": "src/"
