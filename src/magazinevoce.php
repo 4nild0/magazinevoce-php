@@ -108,7 +108,7 @@ class MagazineVoce{
         return $objetosProdutosMagazineVoce;
     }
     
-    private function gerarObjetosProdutosMagazineVoce(DOMXPath $produtosBuscaMagazineVoce){
+    private function gerarObjetosProdutosMagazineVoce($produtosBuscaMagazineVoce){
         $objetosProdutos = [];
         
         foreach($produtosBuscaMagazineVoce as $produtoBuscaMagazineVoce){
