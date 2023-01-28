@@ -17,11 +17,11 @@ class MagazineVoce{
             echo "Loja não existe!" . PHP_EOL;
         }
 
+        $this->buscarDestaques();
+
         $this->setNomeMagazineVoce($nomeMagazineVoce);
 
         $this->setDomMagazineVoce();
-
-        return true;
     }
     private function setEnderecoMagazineVoce($enderecoMagazineVoce){
         $this->enderecoMagazineVoce = $enderecoMagazineVoce;
@@ -53,6 +53,17 @@ class MagazineVoce{
     {
         return $this->htmlMagazineVoce;
     }
+    public function buscarDestaques()
+    {
+        $destaques = new DOMDocument();
+        $destaques->loadHTML($this->enderecoMagazineVoce);
+        $XPathDestaques = new DOMXPath($destaques);
+        $produtosDestaques = $XPathDestaques->query("//li[@class='g-item']");
+
+        $objetosProdutos = $this->gerarObjetosProdutosMagazineVoce($produtosDestaques);
+
+        return $objetosProdutos;
+    } 
 
     private function validarLoja(string $nomeLojaMagazineVoce)
     {
@@ -97,7 +108,7 @@ class MagazineVoce{
         return $objetosProdutosMagazineVoce;
     }
     
-    private function gerarObjetosProdutosMagazineVoce($produtosBuscaMagazineVoce){
+    private function gerarObjetosProdutosMagazineVoce(DOMXPath $produtosBuscaMagazineVoce){
         $objetosProdutos = [];
         
         foreach($produtosBuscaMagazineVoce as $produtoBuscaMagazineVoce){
