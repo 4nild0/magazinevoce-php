@@ -7,7 +7,7 @@ use MagazineVoce\MagazineVoce;
 libxml_use_internal_errors(true);
 
 $magazineVoce = new MagazineVoce("magazine4nild0");
-$produtos = $magazineVoce->buscaProdutosMagazineVoce("notebook 256gb 8gb i5");
+$produtos = $magazineVoce->buscarCategoria("garantia");
 
 $produtos = json_decode($produtos);
 foreach ($produtos as $produto){
